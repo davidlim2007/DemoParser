@@ -48,7 +48,6 @@ std::vector<NameValue>::iterator GetNameValue(const std::string strName)
 void SetNameValue(const NameValue nameValue)
 {
 	std::vector<NameValue>::iterator theIterator;
-	int iValueTemp = 0;
 
 	theIterator = GetNameValue(nameValue.strName);
 
