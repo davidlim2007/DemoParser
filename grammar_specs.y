@@ -161,7 +161,7 @@ line	: '\n'						{ printf("Rule line : \\n\n");}
 		| set	'\n'				{ printf("Rule line : set\n");}
 		| get	'\n'				{ printf("Rule line : get\n");}
 		| add	'\n'				{ printf("Rule line : add\n");}
-		| sub	'\n'				{ printf("Rule line : sub");}
+		| sub	'\n'				{ printf("Rule line : sub\n");}
 		| TOKEN_EXIT '\n'			{ exit(EXIT_SUCCESS); }
 		;
 
