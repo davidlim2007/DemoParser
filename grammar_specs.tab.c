@@ -1463,7 +1463,7 @@ yyreduce:
 
 /* Line 1455 of yacc.c  */
 #line 164 "grammar_specs.y"
-    { printf("Rule line : sub");;}
+    { printf("Rule line : sub\n");;}
     break;
 
   case 9:

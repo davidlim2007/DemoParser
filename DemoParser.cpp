@@ -7,6 +7,7 @@
 #include <vector>
 #include "grammar_specs.tab.h"
 
+extern "C" FILE *yyin;  // yyin must be declared as extern "C".
 extern "C" int yyparse();
 extern "C" int yydebug;
 
@@ -86,9 +87,16 @@ extern "C" int updateSymbolVal(char* symbol, int val)
 	return 1;
 }
 
-int main()
+int main(int argc, char** argv)
 {
 	//yydebug = 1;
+
+	++argv, --argc;  /* skip over program name */
+	if (argc > 0)
+		fopen_s(&yyin, argv[0], "r");
+	else
+		yyin = stdin;
+
 	yyparse();
 }
 
