@@ -1488,7 +1488,7 @@ yyreduce:
 																		printf("SET failed.\n");																	
 																		exit(EXIT_FAILURE);
 																	}
-																	// After using yylval.id, feee it.
+																	// After using yylval.id, free it.
 																	free((yyvsp[(2) - (4)].id));
 																;}
     break;
@@ -1509,7 +1509,7 @@ yyreduce:
 																	{
 																		printf ("GET failed.\n");
 																	}
-																	// After using yylval.id, feee it.
+																	// After using yylval.id, free it.
 																	free((yyvsp[(2) - (2)].id));																	
 																;}
     break;
@@ -1537,7 +1537,7 @@ yyreduce:
 																			{
 																				printf ("Variable [%s] does not exist.\n", (yyvsp[(2) - (4)].id));
 																			}
-																			// After using yylval.id, feee it.
+																			// After using yylval.id, free it.
 																			free((yyvsp[(2) - (4)].id));
 																		;}
     break;
@@ -1565,7 +1565,7 @@ yyreduce:
 																			{
 																				printf ("Variable [%s] does not exist.\n", (yyvsp[(2) - (4)].id));
 																			}
-																			// After using yylval.id, feee it.
+																			// After using yylval.id, free it.
 																			free((yyvsp[(2) - (4)].id));
 																		;}
     break;
