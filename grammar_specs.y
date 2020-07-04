@@ -176,7 +176,7 @@ set		: TOKEN_SET TOKEN_IDENTIFIER '=' numeric_value	{
 																		printf("SET failed.\n");																	
 																		exit(EXIT_FAILURE);
 																	}
-																	// After using yylval.id, feee it.
+																	// After using yylval.id, free it.
 																	free($2);
 																}
 		;
@@ -193,7 +193,7 @@ get		: TOKEN_GET TOKEN_IDENTIFIER							{
 																	{
 																		printf ("GET failed.\n");
 																	}
-																	// After using yylval.id, feee it.
+																	// After using yylval.id, free it.
 																	free($2);																	
 																}
 		;
@@ -217,7 +217,7 @@ add		: TOKEN_ADDITION TOKEN_IDENTIFIER ',' numeric_value		{
 																			{
 																				printf ("Variable [%s] does not exist.\n", $2);
 																			}
-																			// After using yylval.id, feee it.
+																			// After using yylval.id, free it.
 																			free($2);
 																		}
 		;
@@ -241,7 +241,7 @@ sub		: TOKEN_SUBTRACTION TOKEN_IDENTIFIER ',' numeric_value	{
 																			{
 																				printf ("Variable [%s] does not exist.\n", $2);
 																			}
-																			// After using yylval.id, feee it.
+																			// After using yylval.id, free it.
 																			free($2);
 																		}
 		;
